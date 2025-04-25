@@ -1,0 +1,65 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+export default function PickItUpHome() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+      {/* Header */}
+      <header className="flex justify-between items-center p-4 shadow-md">
+        <h1 className="text-2xl font-bold">PickItUp</h1>
+        <div className="space-x-2">
+          <select className="p-1 rounded border">
+            <option>العربية</option>
+            <option>English</option>
+            <option>Español</option>
+            <option>Français</option>
+            <option>Português</option>
+          </select>
+        </div>
+      </header>
+
+      {/* Navigation */}
+      <nav className="flex justify-center gap-6 py-4 text-lg font-medium">
+        <a href="#electronics" className="hover:text-blue-500">إلكترونيات</a>
+        <a href="#clothing" className="hover:text-blue-500">ملابس</a>
+        <a href="#books" className="hover:text-blue-500">كتب</a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="text-center py-12 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <h2 className="text-4xl font-bold mb-4">أفضل العروض العالمية في مكان واحد</h2>
+        <p className="text-lg">استكشف، اختر، واشتري عبر روابط الأفلييت السريعة والآمنة.</p>
+      </section>
+
+      {/* Product Sections */}
+      <section id="electronics" className="p-6">
+        <h3 className="text-2xl font-semibold mb-4">📱 إلكترونيات</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Product 1 */}
+          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
+            <img src="https://via.placeholder.com/300x200" alt="Smartphone" className="rounded mb-2" />
+            <h4 className="text-lg font-bold">هاتف ذكي</h4>
+            <p className="text-sm mb-2">أحدث الهواتف الذكية بأسعار مغرية.</p>
+            <Button asChild>
+              <a href="#" target="_blank">اشتري الآن</a>
+            </Button>
+          </div>
+          {/* Product 2 */}
+          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
+            <img src="https://via.placeholder.com/300x200" alt="Laptop" className="rounded mb-2" />
+            <h4 className="text-lg font-bold">حاسوب محمول</h4>
+            <p className="text-sm mb-2">حاسوب محمول بشاشة عالية الدقة.</p>
+            <Button asChild>
+              <a href="#" target="_blank">اشتري الآن</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="clothing" className="p-6">
+        <h3 className="text-2xl font-semibold mb-4">👗 ملابس وأكسسوارات</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Product 1 */}
+          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
+            <img src="https://via.placeholder.com/300x200" alt="T-shirt" className="rounded mb-2" />
+            <h4 className="text-lg font-bold">تي ش
