@@ -1,65 +1,158 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickItUp - متجر أفلييت</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #34495e;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .hero-section {
+      background: linear-gradient(to right, #3498db, #8e44ad);
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .product-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h4 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .product p {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>PickItUp - متجر أفلييت</h1>
+  </header>
 
-export default function PickItUpHome() {
-  return (
-    <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      {/* Header */}
-      <header className="flex justify-between items-center p-4 shadow-md">
-        <h1 className="text-2xl font-bold">PickItUp</h1>
-        <div className="space-x-2">
-          <select className="p-1 rounded border">
-            <option>العربية</option>
-            <option>English</option>
-            <option>Español</option>
-            <option>Français</option>
-            <option>Português</option>
-          </select>
-        </div>
-      </header>
+  <!-- Navigation -->
+  <nav>
+    <a href="#electronics">إلكترونيات</a>
+    <a href="#clothing">ملابس</a>
+    <a href="#books">كتب</a>
+  </nav>
 
-      {/* Navigation */}
-      <nav className="flex justify-center gap-6 py-4 text-lg font-medium">
-        <a href="#electronics" className="hover:text-blue-500">إلكترونيات</a>
-        <a href="#clothing" className="hover:text-blue-500">ملابس</a>
-        <a href="#books" className="hover:text-blue-500">كتب</a>
-      </nav>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h2>أفضل العروض العالمية في مكان واحد</h2>
+    <p>استكشف، اختر، واشتري عبر روابط الأفلييت السريعة والآمنة.</p>
+  </section>
 
-      {/* Hero Section */}
-      <section className="text-center py-12 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-        <h2 className="text-4xl font-bold mb-4">أفضل العروض العالمية في مكان واحد</h2>
-        <p className="text-lg">استكشف، اختر، واشتري عبر روابط الأفلييت السريعة والآمنة.</p>
-      </section>
+  <!-- Electronics Section -->
+  <section id="electronics" class="section-title">
+    <h3>📱 إلكترونيات</h3>
+    <div class="product-section">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="Smartphone">
+        <h4>هاتف ذكي</h4>
+        <p>أحدث الهواتف الذكية بأسعار مغرية.</p>
+        <a href="#" class="button" target="_blank">اشتري الآن</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="Laptop">
+        <h4>حاسوب محمول</h4>
+        <p>حاسوب محمول بشاشة عالية الدقة.</p>
+        <a href="#" class="button" target="_blank">اشتري الآن</a>
+      </div>
+    </div>
+  </section>
 
-      {/* Product Sections */}
-      <section id="electronics" className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">📱 إلكترونيات</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Product 1 */}
-          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
-            <img src="https://via.placeholder.com/300x200" alt="Smartphone" className="rounded mb-2" />
-            <h4 className="text-lg font-bold">هاتف ذكي</h4>
-            <p className="text-sm mb-2">أحدث الهواتف الذكية بأسعار مغرية.</p>
-            <Button asChild>
-              <a href="#" target="_blank">اشتري الآن</a>
-            </Button>
-          </div>
-          {/* Product 2 */}
-          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
-            <img src="https://via.placeholder.com/300x200" alt="Laptop" className="rounded mb-2" />
-            <h4 className="text-lg font-bold">حاسوب محمول</h4>
-            <p className="text-sm mb-2">حاسوب محمول بشاشة عالية الدقة.</p>
-            <Button asChild>
-              <a href="#" target="_blank">اشتري الآن</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+  <!-- Clothing Section -->
+  <section id="clothing" class="section-title">
+    <h3>👗 ملابس وأكسسوارات</h3>
+    <div class="product-section">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="Dress">
+        <h4>فستان أنيق</h4>
+        <p>فستان بتصميم عصري يناسب جميع الأوقات.</p>
+        <a href="#" class="button" target="_blank">اشتري الآن</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="Jacket">
+        <h4>سترة شتوية</h4>
+        <p>سترة دافئة وعصرية لشتاء مريح.</p>
+        <a href="#" class="button" target="_blank">اشتري الآن</a>
+      </div>
+    </div>
+  </section>
 
-      <section id="clothing" className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">👗 ملابس وأكسسوارات</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Product 1 */}
-          <div className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
-            <img src="https://via.placeholder.com/300x200" alt="T-shirt" className="rounded mb-2" />
-            <h4 className="text-lg font-bold">تي ش
+  <!-- Books Section -->
+  <section id="books" class="section-title">
+    <h3>📚 كتب</h3>
+    <div class="product-section">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="Book 1">
+        <h4>كتاب تحفيزي</h4>
+        <p>كتاب يساعدك في تطوير الذات والتفكير الإيجابي.</p>
+        <a href="#" class="button" target="_blank">اشتري الآن</a>
+      </div>
+      <
